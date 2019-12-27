@@ -3,20 +3,22 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 
-import AppRouterConfig from './ts/router';
+import {AppRoutingModule} from './ts/app-routing/app-routing.module';
 import {MainComponent} from './view/main/main.component';
 import {ProductListComponent} from './view/product/product-list/product-list.component';
+import { ProductInfoComponent } from './view/product/product-info/product-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductInfoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRouterConfig
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
