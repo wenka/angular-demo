@@ -7,13 +7,15 @@ import {AppRoutingModule} from './ts/app-routing/app-routing.module';
 import {MainComponent} from './view/main/main.component';
 import {ProductListComponent} from './view/product/product-list/product-list.component';
 import { ProductInfoComponent } from './view/product/product-info/product-info.component';
+import { LoginComponent } from './view/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     ProductListComponent,
-    ProductInfoComponent
+    ProductInfoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
