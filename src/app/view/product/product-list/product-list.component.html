@@ -1,0 +1,29 @@
+<!--  商品列表区域-->
+<div style="width: 100%;margin: 0 auto">
+  <div class="show-area">
+    <div style="border-bottom: 2px dashed #bbb">
+      Total：{{productList ? productList.length : 0}}
+    </div>
+
+    <div *ngIf="productList">
+      <div *ngFor="let product of productList index as index">
+        <div [ngStyle]="{borderTop:index==0?'none':'1px solid #BBB'}">
+          <div class="serial-number">{{index + 1}}</div>
+          <div style="display: inline-block;margin-left: 20px">{{product.name}}</div>
+          <div style="display: inline-block;float: right">{{product.price}}￥</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  商品添加区域-->
+  <div class="show-area" style="text-align: center;width: 20%;margin:20px auto">
+    <input class="input" placeholder="product name" type="text" [(ngModel)]="product.name">
+    <input class="input" placeholder="product price" type="number" [(ngModel)]="product.price">
+
+    <div class="input" style="text-align: left;color: red;font-size: 10px;line-height: 20px" *ngIf="warn">{{warn}}</div>
+    <button class="input" style="background-color: #1976d2;width: 15%;float: right;font-size: 18px;margin-right: 5px"
+            (click)="addProduct()"> Add
+    </button>
+  </div>
+</div>
